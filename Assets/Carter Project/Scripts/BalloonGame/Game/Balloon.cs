@@ -4,47 +4,37 @@ using UnityEngine;
 
 public class Balloon : MonoBehaviour
 {
-    public static int score = 0;
-    public Collider coll;
-    public bool floating;
-    public float floatRate = 1;
-    public float minFloatRate = 1;
-    public float maxFloatRate = 4;
-    public float despawnTimer = 5f;
+    private float floatRate;
+    private BalloonGenerator spawner;
+    private Transform spawnLocation;
 
-    public bool correctBalloon = true;
+    public void Initialize(BalloonGenerator spawner, Transform spawnLocation, float floatRate, float scale, float lifeTimeDuration) {
+        this.spawner = spawner;
+        this.spawnLocation = spawnLocation;
+        this.floatRate = floatRate;
 
-    public float balloonScale;
-    public float balloonScaleModifier;
-
-    public int x;
-    public int y;
-
-    public BalloonGenerator grid;
-
-    private void Start()
-    {
-        floatRate = Random.Range(minFloatRate, maxFloatRate);
-
-        balloonScale = transform.localScale.x;
-        balloonScale = balloonScale * balloonScaleModifier;
-        transform.localScale = new Vector3(balloonScale, balloonScale, balloonScale);
+        transform.localScale = transform.localScale * scale;
+        StartCoroutine(DestroyBalloon(lifeTimeDuration));
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (floating)
-        {
-            transform.Translate(Vector3.up * Time.deltaTime * floatRate, Space.World);
-            StartCoroutine(DestroyBalloon());
+        transform.Translate(Vector3.up * Time.deltaTime * floatRate, Space.World);
+    }
+
+    IEnumerator DestroyBalloon(float lifeTimeDuration)
+    {
+        yield return new WaitForSeconds(lifeTimeDuration);
+        if (gameObject.activeSelf || enabled) {
+            Destroy(this.gameObject);
+            spawner.MarkUnOccupied(spawnLocation);
+            spawner.RecordMiss();
         }
     }
 
-    IEnumerator DestroyBalloon()
-    {
-        yield return new WaitForSeconds(despawnTimer);
-        grid.hasBalloon[x, y] = false;
+    public void PopBalloon() {
         Destroy(this.gameObject);
+        spawner.MarkUnOccupied(spawnLocation);
+        spawner.RecordHit();
     }
 }

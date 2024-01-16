@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Test Balloon.unity
+    guid: 21846c93fa17bf443bd138c10e4a71cc
+  - enabled: 1
     path: Assets/Scenes/Test Pipe 4.unity
     guid: 1cce208fe9a0084478c7447e6538e4a7
   - enabled: 1
