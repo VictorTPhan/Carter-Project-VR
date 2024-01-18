@@ -9,6 +9,7 @@ public class BalloonGenerator : MonoBehaviour
     public TextMeshProUGUI instructionGUI;
     public TextMeshProUGUI hitGUI;
     public TextMeshProUGUI missGUI;
+    public GameObject nextSceneButton;
     public int hitsToWin;
     public int missesToLose;
     public GameObject[] balloonPrefabs;
@@ -102,6 +103,7 @@ public class BalloonGenerator : MonoBehaviour
         gameOver = true;
         hitGUI.text = "You won!";
         missGUI.enabled = false;
+        nextSceneButton.SetActive(true);
     }
 
     public void Lose() {

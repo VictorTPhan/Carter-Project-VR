@@ -7,6 +7,7 @@ public class PersonSpawner : MonoBehaviour
 {
     public ColorZone[] zones;
     public TextMeshProUGUI resultGUI;
+    public GameObject nextSceneButton;
     public int maxPeople;
     public float interval = 0.5f;
     public List<GameObject> people;
@@ -37,6 +38,7 @@ public class PersonSpawner : MonoBehaviour
             resultGUI.text += "\n" + incorrect + " people are misplaced.";
         } else {
             resultGUI.text = "You got all " + maxPeople + " people sorted!";
+            nextSceneButton.SetActive(true);
         }
     }
 }
