@@ -6,6 +6,7 @@ using UnityEngine;
 public class WaterCollector : MonoBehaviour
 {
     public TextMeshProUGUI statusGUI;
+    public GameObject nextLevelButton;
     bool hasWater = false;
 
     public void GetWater() {
@@ -15,8 +16,10 @@ public class WaterCollector : MonoBehaviour
     public void UpdateGUI() {
         if (hasWater) {
             statusGUI.text = "Success!";
+            nextLevelButton.SetActive(true);
         } else {
             statusGUI.text = "Not quite!";
+            nextLevelButton.SetActive(false);
         }
     }
 }
