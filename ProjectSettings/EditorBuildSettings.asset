@@ -6,23 +6,53 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Balloons/Level 2.unity
-    guid: 21846c93fa17bf443bd138c10e4a71cc
+    path: Assets/Scenes/SampleScene.unity
+    guid: 55daccc09a3b69647bbab145b54a3ab3
   - enabled: 1
-    path: Assets/Scenes/Pipes/Level 5.unity
-    guid: 1cce208fe9a0084478c7447e6538e4a7
-  - enabled: 1
-    path: Assets/Scenes/Pipes/Level 4.unity
-    guid: 141f7c5bf024767458152d21d9a17c69
-  - enabled: 1
-    path: Assets/Scenes/Pipes/Level 3.unity
-    guid: 622bc13114153324f81dd7e35c022bbd
-  - enabled: 1
-    path: Assets/Scenes/Pipes/Level 1.unity
+    path: Assets/Scenes/Pipes/Pipe Level 1.unity
     guid: d76950d750be74f45a7a88133904f614
   - enabled: 1
-    path: Assets/Scenes/Grouping/Level 2.unity
+    path: Assets/Scenes/Pipes/Pipe Level 2.unity
+    guid: 4d7e5250e45e95440a3cd0c43906d02d
+  - enabled: 1
+    path: Assets/Scenes/Pipes/Pipe Level 3.unity
+    guid: 622bc13114153324f81dd7e35c022bbd
+  - enabled: 1
+    path: Assets/Scenes/Pipes/Pipe Level 4.unity
+    guid: 141f7c5bf024767458152d21d9a17c69
+  - enabled: 1
+    path: Assets/Scenes/Pipes/Pipe Level 5.unity
+    guid: 1cce208fe9a0084478c7447e6538e4a7
+  - enabled: 1
+    path: Assets/Scenes/Grouping/Grouping Level 1.unity
+    guid: 26918507cf1b83242a5beaf9e65fa9c5
+  - enabled: 1
+    path: Assets/Scenes/Grouping/Grouping Level 2.unity
     guid: 43160b361391e0d438645ca9fdf7e09f
+  - enabled: 1
+    path: Assets/Scenes/Grouping/Grouping Level 3.unity
+    guid: 5c22866fb9ba3aa459ae862d676848f0
+  - enabled: 1
+    path: Assets/Scenes/Grouping/Grouping Level 4.unity
+    guid: 9f74e1202bcd3004f8d77867988e1b5b
+  - enabled: 1
+    path: Assets/Scenes/Grouping/Grouping Level 5.unity
+    guid: 303ce11249c4a3848a0f6221ed6788bf
+  - enabled: 1
+    path: Assets/Scenes/Balloons/Balloon Level 1.unity
+    guid: e7c1a38ea336a0344b4707f419973b25
+  - enabled: 1
+    path: Assets/Scenes/Balloons/Balloon Level 2.unity
+    guid: 21846c93fa17bf443bd138c10e4a71cc
+  - enabled: 1
+    path: Assets/Scenes/Balloons/Balloon Level 3.unity
+    guid: e0ccb456fa971044296cd45d684c0cd5
+  - enabled: 1
+    path: Assets/Scenes/Balloons/Balloon Level 4.unity
+    guid: bc825696ac09b0045b53cdecc048146a
+  - enabled: 1
+    path: Assets/Scenes/Balloons/Balloon Level 5.unity
+    guid: 641e4fa477bfe324a92eddeb4481e218
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}
